@@ -1,0 +1,25 @@
+DROP TABLE IF EXISTS `#__alumnidirectory`;
+
+CREATE TABLE IF NOT EXISTS `#__alumnidirectory` (
+	`ID` SERIAL,
+	`First_Name` VARCHAR(255) NOT NULL,
+	`Maiden_Name` VARCHAR(255) NOT NULL,
+	`Last_Name` VARCHAR(255) NOT NULL,
+	`Address` VARCHAR(255) NOT NULL,
+	`City` VARCHAR(255) NOT NULL,
+	`State`  VARCHAR(255) NOT NULL,
+	`Zip` VARCHAR(255) NOT NULL,
+	`Home_Phone` VARCHAR(255) NOT NULL,
+	`Employer` VARCHAR(255) NOT NULL,
+	`Occupation` VARCHAR(255) NOT NULL,
+	`Work_Phone` VARCHAR(255) NOT NULL,
+	`Cell_Phone` VARCHAR(255) NOT NULL,
+	`E-Mail` VARCHAR(255) NOT NULL,
+	`Class_Of` VARCHAR(255) NOT NULL,
+	`Spouse_Name` VARCHAR(255) NOT NULL,
+	`Spouse_Class` VARCHAR(255) NOT NULL,
+	`Religion` VARCHAR(255) NOT NULL,
+	`last_update` TIMESTAMP,
+	`expired` VARCHAR(1) NOT NULL,
+	PRIMARY KEY(id)
+);

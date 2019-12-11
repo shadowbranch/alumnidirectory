@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.2.0" method="upgrade">
+ 
+	<name>COM_ALUMNIDIRECTORY</name>
+	<creationDate>March 2016</creationDate>
+	<author>Daniel Moree</author>
+	<authorEmail>daniel@shadowbranch.com</authorEmail>
+	<authorUrl>https://www.shadowbranch.com</authorUrl>
+	<copyright>None</copyright>
+	<license>GNU GPL 3.0</license>
+	<version>0.3</version>
+	<description>COM_ALUMNIDIRECTORY_DESCRIPTION</description>
+ 
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.sql</file>
+		</sql>
+	</uninstall>
+	<update> <!-- Runs on update -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/</schemapath>
+		</schemas>
+	</update>
+ 
+	<!-- Site Main File Copy Section -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>alumnidirectory.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>language</folder>
+	</files>
+ 
+	<languages folder="site/language">
+		<language tag="en-GB">en-GB/en-GB.com_alumnidirectory.ini</language>
+    </languages>
+
+	<administration>
+		<!-- Administration Main File Copy Section -->
+		<files folder="admin">
+			<filename>index.html</filename>
+			<folder>sql</folder>
+		</files>
+		<languages folder="admin/language">
+        		<language tag="en-GB">en-GB/en-GB.com_alumnidirectory.ini</language>
+                <language tag="en-GB">en-GB/en-GB.com_alumnidirectory.sys.ini</language>
+		</languages>
+	</administration>
+ 
+</extension>
